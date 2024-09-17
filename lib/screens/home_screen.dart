@@ -1,6 +1,8 @@
 import 'package:celes_store_magic/screens/add_debt_screen.dart';
+
 import 'package:celes_store_magic/screens/client_list_screen.dart';
 import 'package:celes_store_magic/screens/register_payment_screen.dart';
+import 'package:celes_store_magic/screens/summary_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget 
@@ -54,6 +56,10 @@ class HomeScreen extends StatelessWidget
             ElevatedButton.icon(
               onPressed: () {
                 // Navegar a la pantalla de Resumen/Historial
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SummaryScreen()),
+                );
               },
               icon: Icon(Icons.history), // Icono para Ver Resumen/Historial
               label: Text('Ver Resumen/Historial'),
