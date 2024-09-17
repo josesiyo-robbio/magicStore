@@ -1,10 +1,13 @@
 import 'package:celes_store_magic/screens/add_debt_screen.dart';
 import 'package:celes_store_magic/screens/client_list_screen.dart';
+import 'package:celes_store_magic/screens/register_payment_screen.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget 
+{
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
     return Scaffold(
       appBar: AppBar(
         title: Text('Inicio - Tiendita'),
@@ -39,6 +42,10 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: () {
                 // Navegar a la pantalla de Registrar Pago
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterPaymentScreen()),
+                );
               },
               icon: Icon(Icons.payment), // Icono para Registrar Pago
               label: Text('Registrar Pago'),
