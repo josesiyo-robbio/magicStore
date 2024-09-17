@@ -1,3 +1,4 @@
+import 'package:celes_store_magic/screens/add_debt_screen.dart';
 import 'package:celes_store_magic/screens/client_list_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,20 +14,23 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-ElevatedButton.icon(
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ClientListScreen()),
-    );
-  },
-  icon: Icon(Icons.people), // Icono para Lista de Clientes
-  label: Text('Lista de Clientes'),
-),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ClientListScreen()),
+                );
+              },
+              icon: Icon(Icons.people), // Icono para Lista de Clientes
+              label: Text('Lista de Clientes'),
+            ),
             SizedBox(height: 16.0),
             ElevatedButton.icon(
               onPressed: () {
-                // Navegar a la pantalla de Agregar Deuda
+                                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddDebtScreen()),
+                );
               },
               icon: Icon(Icons.add_shopping_cart), // Icono para Agregar Deuda
               label: Text('Agregar Deuda'),
