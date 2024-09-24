@@ -38,7 +38,7 @@ El objetivo principal de **CelesStoreMagic** es digitalizar el proceso de manejo
 ## 📱 Capturas de pantalla
 
 > **Pantalla Principal**  
-![Pantalla Principal](./assets/images/screen1.png)  
+<img src="./assets/images/screen1.png" alt="Pantalla Principal" width="40%">
 
 > **Registro de Deudas y Pagos**  
 ![Registro de Deudas](./assets/images/screen2.png)  
