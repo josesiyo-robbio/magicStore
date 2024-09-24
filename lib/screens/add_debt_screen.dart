@@ -2,11 +2,14 @@ import 'package:celes_store_magic/providers/db_provider.dart';
 import 'package:flutter/material.dart';
 
 
+
 class AddDebtScreen extends StatefulWidget 
 {
   @override
   _AddDebtScreenState createState() => _AddDebtScreenState();
 }
+
+
 
 class _AddDebtScreenState extends State<AddDebtScreen> 
 {
@@ -44,8 +47,7 @@ class _AddDebtScreenState extends State<AddDebtScreen>
   {
     setState(() 
     {
-      filteredClients = clients.where((client) => client["nombre"].toLowerCase().contains(searchTerm.toLowerCase()))
-          .toList();
+      filteredClients = clients.where((client) => client["nombre"].toLowerCase().contains(searchTerm.toLowerCase())).toList();
     });
   }
 
@@ -53,8 +55,8 @@ class _AddDebtScreenState extends State<AddDebtScreen>
   // Mostrar el modal para agregar deuda
   void _showAddDebtDialog(int clienteId, String clientName) 
   {
-    String debtAmount = '';
-    String debtDescription = '';
+    String debtAmount       =   '';
+    String debtDescription  =   '';
 
     showDialog
     (
@@ -63,8 +65,8 @@ class _AddDebtScreenState extends State<AddDebtScreen>
       {
         return AlertDialog
         (
-          title : Text('Agregar Deuda a $clientName'),
-          content : 
+          title     :   Text('Agregar Deuda a $clientName'),
+          content   : 
           Column
           (
             mainAxisSize  : MainAxisSize.min,
@@ -72,9 +74,9 @@ class _AddDebtScreenState extends State<AddDebtScreen>
             [
               TextField
               (
-                decoration: InputDecoration(labelText: 'Monto de la Deuda'),
-                keyboardType: TextInputType.number,
-                onChanged: (value) 
+                decoration    :   InputDecoration(labelText: 'Monto de la Deuda'),
+                keyboardType  :   TextInputType.number,
+                onChanged     :   (value) 
                 {
                   debtAmount = value;
                 },
@@ -82,8 +84,8 @@ class _AddDebtScreenState extends State<AddDebtScreen>
 
               TextField
               (
-                decoration: InputDecoration(labelText: 'Descripción'),
-                onChanged: (value) 
+                decoration  :   InputDecoration(labelText: 'Descripción'),
+                onChanged   :   (value) 
                 {
                   debtDescription = value;
                 },
@@ -96,16 +98,16 @@ class _AddDebtScreenState extends State<AddDebtScreen>
           [
             TextButton
             (
-              onPressed: () 
+              onPressed : () 
               {
                 Navigator.of(ctx).pop();
               },
-              child: Text('Cancelar'),
+              child : Text('Cancelar'),
             ),
 
             ElevatedButton
             (
-              onPressed: () 
+              onPressed : () 
               {
                 if (debtAmount.isNotEmpty) 
                 {
@@ -113,11 +115,12 @@ class _AddDebtScreenState extends State<AddDebtScreen>
                   Navigator.of(ctx).pop();
                 }
               },
-              child: Text('Agregar'),
+              child : Text('Agregar'),
             ),
 
           ],
         );
+      
       },
     );
   }
@@ -150,9 +153,9 @@ class _AddDebtScreenState extends State<AddDebtScreen>
   {
     return Scaffold
     (
-      appBar: AppBar
+      appBar  : AppBar
       (
-        title: Text('Agregar Deuda'),
+        title : Text('Agregar Deuda'),
       ),
 
       body  : 
@@ -181,7 +184,7 @@ class _AddDebtScreenState extends State<AddDebtScreen>
           
           Expanded
           (
-            child: ListView.builder
+            child : ListView.builder
             (
               itemCount   : filteredClients.length,
               itemBuilder : (ctx, index) 

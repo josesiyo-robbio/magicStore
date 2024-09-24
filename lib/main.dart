@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
+
 import 'package:celes_store_magic/theme/theme.dart'; 
 
-void main() {
+
+
+void main() 
+{
   runApp(MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget 
 {
@@ -14,7 +20,7 @@ class MyApp extends StatelessWidget
     final materialTheme = MaterialTheme(ThemeData().textTheme);
     return MaterialApp
     (
-      title: 'App Tiendita',
+      title       :   'App Tiendita',
       theme       :   materialTheme.light(),  
       darkTheme   :   materialTheme.dark(), 
       home: HomeScreen(),
