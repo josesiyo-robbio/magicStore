@@ -38,7 +38,7 @@ El objetivo principal de **CelesStoreMagic** es digitalizar el proceso de manejo
 ## 📱 Capturas de pantalla
 
 > **Pantalla Principal**  
-![Pantalla Principal](./assets/images/screen1.png)  
+![Pantalla Principal](./assets/images/screen1.PNG)  
 
 > **Registro de Deudas y Pagos**  
 ![Registro de Deudas](./assets/images/screen2.png)  
@@ -123,7 +123,7 @@ Para compilar la app en iOS y ejecutarla en un dispositivo, sigue los siguientes
 
 ## 🏆 Créditos
 
-**CelesStoreMagic** fue creado con mucho 💙 por [Tu Nombre] como una solución digital para facilitar el manejo de fiados en tiendas locales.
+**CelesStoreMagic** fue creado con mucho 💙 por mi como una solución digital para facilitar el manejo de fiados en tiendas locales.
 
 ---
 
